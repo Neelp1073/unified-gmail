@@ -1,0 +1,102 @@
+@import "tailwindcss";
+@import "@fontsource-variable/geist";
+@import "@fontsource-variable/geist-mono";
+
+@theme inline {
+  --font-sans: "Geist Variable", "Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono Variable", ui-monospace, monospace;
+  --color-canvas: var(--bg);
+  --color-canvas-muted: var(--bg-accent);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-soft: var(--accent-soft);
+  --color-ok: var(--ok);
+  --color-warn: var(--warn);
+  --color-danger: var(--danger);
+}
+
+:root {
+  --bg: #f3f1ea;
+  --bg-accent: #ebe7dd;
+  --surface: #fffcf6;
+  --surface-2: #f7f3ea;
+  --line: #e4dfd3;
+  --line-strong: #d3ccbc;
+  --ink: #1c1915;
+  --ink-soft: #5d574c;
+  --muted: #8a8376;
+  --accent: #4f46e5;
+  --accent-hover: #4338ca;
+  --accent-soft: #eef2ff;
+  --ok: #0f766e;
+  --warn: #c2410c;
+  --danger: #b42318;
+  --shadow: 0 1px 2px rgb(28 25 21 / 0.04), 0 10px 30px rgb(28 25 21 / 0.06);
+}
+
+:root.dark {
+  --bg: #0c0b09;
+  --bg-accent: #12110e;
+  --surface: #161511;
+  --surface-2: #1d1b16;
+  --line: #2b2822;
+  --line-strong: #3c382f;
+  --ink: #f4f0e6;
+  --ink-soft: #c6c0b3;
+  --muted: #9b9487;
+  --accent: #8b87ff;
+  --accent-hover: #a8a5ff;
+  --accent-soft: #1d1b46;
+  --ok: #2dd4bf;
+  --warn: #fb923c;
+  --danger: #f87171;
+  --shadow: 0 1px 2px rgb(0 0 0 / 0.45), 0 16px 40px rgb(0 0 0 / 0.35);
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--accent) 28%, transparent);
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.popup-root {
+  width: 380px;
+  min-height: 520px;
+  background: var(--bg);
+}
